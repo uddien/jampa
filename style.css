@@ -19,3 +19,17 @@ body {
     --primary: #255ff4;
     font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
 }
+
+.hourglass {
+    --polygonH: polygon(0% 0%, 100% 0%, 100% 5.55%, 95% 5.55%, 95% 28%, 60% 46%, 60% 54%, 95% 72%, 95% 94.45%, 100% 94.45%, 100% 100%, 0% 100%, 0% 94.45%, 5% 94.45%, 5% 72%, 40% 54%, 40% 46%, 5% 28%, 5% 5.55%, 0% 5.55%);
+    animation-name: flip;
+    animation-timing-function: ease-in-out;
+    background-image: linear-gradient(var(--primary) 0.5em, #737a8c55 0.5em 8.5em, var(--primary) 8.5em);
+    clip-path: var(--polygonH);
+    -webkit-clip-path: var(--polygonH);
+    overflow: hidden;
+    position: relative;
+    width: 5em;
+    height: 9em;
+    z-index: 0;
+}
