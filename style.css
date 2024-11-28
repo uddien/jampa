@@ -51,3 +51,17 @@ body {
     height: 8em;
     z-index: 1;
 }
+
+.hourglass:after {
+    animation-name: glare;
+    background:
+        linear-gradient(90deg, #0000 0.5em, #0003 0.5em 1.5em, #0000 1.5em 3.5em, #fff3 3.5em 4.5em, #fff0 4.5em 6.5em, #0003 6.5em 7.5em, #0000 7.5em) 0 0 / 100% 0.5em,
+        linear-gradient(90deg, #0000 0.75em, #0003 0.75em 1.25em, #0000 1.25em 3.75em, #fff3 3.75em 4.25em, #fff0 4.25em 6.75em, #0003 6.75em 7.25em, #0000 7.25em) 0 0.5em / 100% 8em,
+        linear-gradient(90deg, #0000 0.5em, #0003 0.5em 1.5em, #0000 1.5em 3.5em, #fff3 3.5em 4.5em, #fff0 4.5em 6.5em, #0003 6.5em 7.5em, #0000 7.5em) 0 100% / 100% 0.5em;
+    background-repeat: repeat-x;
+    top: 0;
+    left: -3em;
+    width: 200%;
+    height: 100%;
+    z-index: 2;
+}
