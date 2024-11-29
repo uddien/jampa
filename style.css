@@ -69,5 +69,7 @@ body {
 .hourglass:before,
 .hourglass:after {
     animation-timing-function: linear;
-    content: "";  
+    content: "";
+    display: block;
+    position: absolute;
 }
