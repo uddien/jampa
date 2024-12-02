@@ -5,6 +5,13 @@
     padding: 0;
 }
 
+:root {
+    --bg: #e3e4e8;
+    --fg: #2e3138;
+    --primary: #255ff4;
+    font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
 body {
     background: var(--bg);
     display: grid;
@@ -13,11 +20,11 @@ body {
     place-items: center;
 }
 
-:root {
-    --bg: #e3e4e8;
-    --fg: #2e3138;
-    --primary: #255ff4;
-    font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+.hourglass,
+.hourglass:before,
+.hourglass:after {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 .hourglass {
@@ -32,6 +39,14 @@ body {
     width: 5em;
     height: 9em;
     z-index: 0;
+}
+
+.hourglass:before,
+.hourglass:after {
+    animation-timing-function: linear;
+    content: "";
+    display: block;
+    position: absolute;
 }
 
 .hourglass:before {
@@ -64,12 +79,4 @@ body {
     width: 200%;
     height: 100%;
     z-index: 2;
-}
-
-.hourglass:before,
-.hourglass:after {
-    animation-timing-function: linear;
-    content: "";
-    display: block;
-    position: absolute;
 }
