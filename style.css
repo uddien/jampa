@@ -80,3 +80,32 @@ body {
     height: 100%;
     z-index: 2;
 }
+
+/* Animations */
+@keyframes fill {
+    from {
+        clip-path: var(--polygonB1);
+        -webkit-clip-path: var(--polygonB1);
+    }
+
+    10% {
+        clip-path: var(--polygonB2);
+        -webkit-clip-path: var(--polygonB2);
+    }
+
+    45% {
+        clip-path: var(--polygonB3);
+        -webkit-clip-path: var(--polygonB3);
+    }
+
+    80% {
+        clip-path: var(--polygonB4);
+        -webkit-clip-path: var(--polygonB4);
+    }
+
+    85%,
+    to {
+        clip-path: var(--polygonB5);
+        -webkit-clip-path: var(--polygonB5);
+    }
+}
