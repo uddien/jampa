@@ -109,3 +109,35 @@ body {
         -webkit-clip-path: var(--polygonB5);
     }
 }
+
+@keyframes glare {
+
+    from,
+    90% {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(3em);
+    }
+}
+
+@keyframes flip {
+
+    from,
+    90% {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #17181c;
+        --fg: #c7cad1;
+    }
+}
